@@ -78,5 +78,5 @@ class PairRotationsController < ApplicationController
     @pair_rotation.destroy
     redirect_to cohort_pair_rotations_path(@cohort), notice: 'Rotation was deleted'
   end
-
+end
 end

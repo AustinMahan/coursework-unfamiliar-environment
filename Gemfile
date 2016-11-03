@@ -1,6 +1,6 @@
 ruby '2.1.5'
 
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '~> 4.1.8'
 gem 'pundit', '~> 0.3.0'
@@ -33,6 +33,7 @@ gem 'rails-observers', '~> 0.1.2'
 gem 'kaminari', '~> 0.16.3'
 gem 'foreigner'
 gem 'passenger'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'

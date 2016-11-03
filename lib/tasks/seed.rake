@@ -19,7 +19,7 @@ namespace :db do
 
     desc 'Seeds the app the fullstack curriculum'
     task full_stack_curriculum: :environment do
-      curriculum = Curriculum.find_or_create_by!(name: 'Full Stack', description: 'full stack')
+      curriculum = Curriculum.find_or_create_by!(name: 'Full Stack', description: 'full stack', version: 'Full Stack')
       data = JSON.parse(File.read(Rails.root.join('db/seeds/full-stack-curriculum.json')), symbolize_names: true)
       data.each do |unit_name, data|
         tags = data[:tags] + [unit_name]
@@ -201,7 +201,7 @@ namespace :db do
       puts "URLs:"
       puts "  Instructor: http://localhost:3000/class_projects/#{gcamp.id}/epics/#{pages_epic.id}"
       puts "  Student:    http://localhost:3000/users/#{student.id}/epics/#{pages_epic.id}"
-      puts "  API:        http://localhost:3000/api/student_projects?cohort_id=#{cohort.id}&class_project_id=#{gcamp.id}"
+      puts "  API:        http://localhost:3000/api/student_projects?cohort_id=#{cohort.id}&class_project_id=#{class_project.id}"
     end
   end
 end
